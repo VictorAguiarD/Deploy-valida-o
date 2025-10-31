@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ME - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilo rápido de fundo e card (pode mover para style.css depois) */
+    body.login-bg {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+      font-family: "Inter", sans-serif;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 16px;
+    }
+
+    .login-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      width: 360px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .login-header h1 {
+      margin-bottom: 8px;
+      color: #1e3a8a;
+      font-size: 1.6rem;
+    }
+
+    .login-header p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .input:focus {
+      border-color: #2563eb;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+    }
+
+    .btn.full {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn.full:hover {
+      background: #1d4ed8;
+    }
+
+    .muted.small {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body class="login-bg">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h1>Manuntence Elevar</h1>
+        <p>Entre com suas credenciais de administrador</p>
+      </div>
+
+      <form id="loginForm">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" class="input" placeholder="admin" required>
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" class="input" placeholder="********" required>
+
+        <button type="submit" class="btn full">Entrar</button>
+      </form>
+
+      <p class="muted small">Versão 1.0 · Sistema de Gestão de Manutenção</p>
+    </div>
+  </div>
+
+  <!-- O JS precisa ser módulo, senão o import do core.js falha -->
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

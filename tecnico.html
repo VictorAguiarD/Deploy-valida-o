@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil Técnico - Manuntence Elevar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      color: #111827;
+    }
+
+    /* Sidebar */
+    aside {
+      width: 250px;
+      background: #1e3a8a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    nav li:hover, nav li.active {
+      background: #2563eb;
+    }
+
+    nav li span {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* Main area */
+    main {
+      flex: 1;
+      background: #f9fafb;
+      padding: 24px;
+      overflow-y: auto;
+    }
+
+    header {
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      padding: 14px 24px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      color: #1e3a8a;
+    }
+
+    #logoutBtn {
+      background: #ef4444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    #logoutBtn:hover {
+      background: #dc2626;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 16px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #cbd5e1;
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <div class="logo">🧰 ME Técnico</div>
+    <nav>
+      <ul>
+        <li data-page="chamados" class="active">🧾 <span>Chamados</span></li>
+        <li data-page="os">🛠️ <span>Ordens de Serviço</span></li>
+        <li data-page="relatorios">📊 <span>Relatórios</span></li>
+        <li data-page="manuais">📚 <span>Manuais e Documentos</span></li>
+        <li data-page="catalogo">⚙️ <span>Catálogo de Equipamentos</span></li>
+        <li data-page="pendencias">⚠️ <span>Pendências</span></li>
+        <li data-page="calendario">🗓️ <span>Calendário</span></li>
+      </ul>
+    </nav>
+    <footer>© 2025 Manuntence Elevar</footer>
+  </aside>
+
+  <main>
+    <header>
+      <h1 id="pageTitle">Chamados</h1>
+      <button id="logoutBtn">Sair</button>
+    </header>
+    <section id="content"></section>
+  </main>
+
+  <script type="module" src="tecnico.js"></script>
+</body>
+</html>
